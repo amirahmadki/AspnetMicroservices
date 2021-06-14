@@ -11,5 +11,11 @@ services:
       dockerfile: Servcies/Catalog/CatalogAPI/Dockerfile
   
 
+  basket.api:
+    image: ${DOCKER_REGISTRY-}basketapi
+    build:
+      context: .
+      dockerfile: Servcies/Basket/Basket.API/Dockerfile
+
 volumes:
   mongo_data: 
